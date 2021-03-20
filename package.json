@@ -39,5 +39,8 @@
     "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
     "test:watch": "npm run test -- --watch",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }

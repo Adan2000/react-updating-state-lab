@@ -18,9 +18,7 @@ class YouTubeDebugger extends React.Component {
           }
         };
       }
-      //here we set the initial state 
-
-
+    //here we set the initial state 
     haandlechangeResolution = () => {
         this.setState({
             settings: {
@@ -32,10 +30,10 @@ class YouTubeDebugger extends React.Component {
             }
         })
     }
-    //we made this to alter the state
-    //we first used the setState
-    //then we called on settings and used the spread operator 
-    //to make a new array with the new resolution
+    //since we are only changing one value we need to de-compose
+    //the settings object. so we use the spread operator 
+    //we then use it on the video object as well to de-compose that one
+    //and last, we set the new resolution value .."720"
 
     handleChangeBitrate = () => {
         this.setState({
@@ -45,12 +43,8 @@ class YouTubeDebugger extends React.Component {
             }
         })
     }
-    //we made this to alter the state
-    //we first used the setState
-    //then we called on settings and used the spread operator 
-    //here we updated the bitrate
-
-
+    //same process but we only have to decompose the settings object
+    //once we have that, set the new bitrate value.. 12
     render() {
         return (
             <div>
@@ -64,11 +58,7 @@ class YouTubeDebugger extends React.Component {
         )
     }
     //we make two buttons, BOTH with the onClick event
-    //this event will then target the resolution and bitrate
-    //function when clicked and in turn change them from the
-    //initial state
-
-
+    //this event will then target the resolution and bitrate function
 }
 
 export default YouTubeDebugger;
